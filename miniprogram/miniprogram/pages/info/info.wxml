@@ -1,0 +1,18 @@
+<view class="container0">
+  <mp-cell wx:for="{{noticeList}}" id="{{index}}" link hover="true" bindtap="getDetail">
+    <view class="bg-white rec1 shadow" style="font-size:14px;margin-bottom:8px">
+      <view style="font-weight:bold">{{item[0]}}</view>
+      <view style="margin-bottom:4px" class="date">{{item[1]}}</view>
+    </view>
+  </mp-cell>
+
+
+  <view style="margin-bottom: 10%;"></view>
+</view>
+<cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-image class="cover-image" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+    <cover-view class="cover-view" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+  </cover-view>
+</cover-view>

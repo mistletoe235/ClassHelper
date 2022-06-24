@@ -1,0 +1,43 @@
+<view class="header">
+  <view class="dropdown">
+    <picker bindchange="selectSubject" value="{{subjectNumber}}" range="{{currentSubject}}">
+      <view class="picker">
+        {{currentSubject[subjectNumber]}}
+      </view>
+    </picker>
+  </view>
+  <view bindtap="uploadMat" class="uploadMaterial">
+    上传资料
+  </view>
+</view>
+
+<view class="body">
+  <view class="container1" wx:if="{{subjectNumber==0}}">
+    <view class="materialCard" wx:for="{{currentSubjectMaterial}}" wx:for-index="materialIndex" bindlongpress="deleteFile" id="{{materialIndex}}">
+      <view class="mcInfo">
+        <view class="mcName">
+          {{item.name}}
+        </view>
+        <view class="mcSubject">
+          所属科目：{{item.subject}}
+        </view>
+      </view>
+      <button class="download" type="primary" bindtap="downloadFile" id="{{materialIndex}}">
+      </button>
+    </view>
+
+  </view>
+</view>
+
+
+
+
+
+
+<cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-image class="cover-image" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+    <cover-view class="cover-view" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+  </cover-view>
+</cover-view>

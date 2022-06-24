@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="top_tip">
+    <button style="background-color: #23affe;color:aliceblue">
+      <navigator url="../NFC/NFC">信息录入</navigator>
+    </button>
+  </view>
+  <view class='history-table-wrap'>
+    <view class="table">
+      <view class="tr">
+        <view class="th th1">姓名</view>
+        <view class="th th2">勾选</view>
+        <view class="th th3">电话</view>
+      </view>
+      <view wx:for="{{student}}" wx:key="{{item.number}}">
+        <view class="tr" hidden="{{v[index]}}">
+          <view class="td td1">
+            {{item.name}}
+          </view>
+          <view class="td td2">
+            <switch id="{{index}}" class="switch" bindchange="switchChange"></switch>
+          </view>
+          <view class="td td3">
+            <button id="{{index}}" size="mini" bindtap="tel" style="width: 280rpx; height: 60rpx; font-size: 34rpx;">
+              {{item.phonenumber}}</button>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="xzwj">
+            <button style="background-color: #52c59f;" bindtap="chooseMessageFile">选择文件</button>
+        </view> -->
+  </view>
+  <view style="height: 5000rpx;"></view>
+</view>
+<cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-image class="cover-image" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+    <cover-view class="cover-view" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+  </cover-view>
+</cover-view>

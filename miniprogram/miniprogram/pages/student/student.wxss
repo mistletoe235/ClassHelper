@@ -1,0 +1,73 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.xzwj {
+  margin: 100rpx;
+
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.history-table-wrap{
+  position: absolute;
+  width: 740rpx;
+  left: 340rpx
+;
+  margin-left: -334rpx;
+  top: 120rpx;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* 表格代码   */
+.table{
+  border:1px solid #dadada;
+  border-right:0;
+  border-bottom: 0;
+  width: 98%;
+  margin-left: 1%;
+}
+.tr{
+  width:100%;
+  display: flex;
+  justify-content:space-around;
+}
+.th,.td{
+  padding: 8px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+}
+.th1,.td1{
+  width: 50%;
+  font-weight: 700;
+}
+.th2,.td2{
+  width:50%;
+}
+.th{
+  font-weight: 800;
+  background-color: #23affe;
+  font-size: 30rpx;
+  color: aliceblue;
+}
+.td{
+  font-size: 35rpx;
+  color: #000000;
+}
+.switch{
+  transform: scale(0.6) !important;
+  height: 30rpx;
+}
+.button{
+  width: 280rpx; 
+  height: 60rpx; 
+  font-size: 38rpx;
+}

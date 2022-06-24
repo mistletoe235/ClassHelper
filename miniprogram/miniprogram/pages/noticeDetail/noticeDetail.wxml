@@ -1,0 +1,12 @@
+<!--pages/noticeDetail/noticeDetail.wxml-->
+<view class = "container0">
+  <view class="bg-white rec2 shadow"   style="font-size:14px;margin-bottom:8px">
+      <view class="title" >{{title}}</view>
+      <view style="margin-bottom:4px" class="date">{{date}}</view>
+  </view>
+  <view class="bg-white rec3 shadow font-break">
+    <text user-select='true'>{{detail}}</text>
+  </view>
+  <view style="margin-bottom: 10%;"></view>
+</view>
+

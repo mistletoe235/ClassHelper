@@ -1,0 +1,16 @@
+<view class="container0">
+  <view class="rec2 bg-white shadow" style="font-size: medium;">
+    <view style="margin-left:10%">
+      <view class="title">
+      读取的第一扇区信息为：
+      </view>
+      <view wx:if="{{aidvalue}}">{{aidvalue}}
+      </view>
+      <view class="power_item"></view>
+      <view style="margin-top: 20rpx;">
+      <input class="power_item" name='name' placeholder="请输入姓名" bindinput="nameInput"/>
+      </view>
+    </view>
+    <button bindtap="doName"  size="default" style="background: #23affe;color:aliceblue;margin-top:100rpx;">提交</button>
+  </view>
+</view>

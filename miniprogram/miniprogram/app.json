@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/info/info",
+
+    "pages/noticeDetail/noticeDetail",
+    "pages/file/file",
+    "pages/student/student",
+    "pages/table/table",
+    "pages/bj_login/bj_login",
+    "pages/user/user",
+    "pages/NFC/NFC"
+
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "班助",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/info/info",
+        "text": "通知",
+        "iconPath": "/image/tabbar/info.png",
+        "selectedIconPath": "/image/tabbar/info_full.png"
+      },
+      {
+        "pagePath": "pages/student/student",
+        "text": "名单",
+        "iconPath": "/image/tabbar/student.png",
+        "selectedIconPath": "/image/tabbar/student_full.png"
+      },
+      {
+        "pagePath": "pages/table/table",
+        "text": "团课",
+        "iconPath": "/image/tabbar/table.png",
+        "selectedIconPath": "/image/tabbar/table_full.png"
+      },
+      {
+        "pagePath": "pages/file/file",
+        "text": "文件",
+        "iconPath": "/image/tabbar/file.png",
+        "selectedIconPath": "/image/tabbar/file_full.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "/image/tabbar/user.png",
+        "selectedIconPath": "/image/tabbar/user_full.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents"
+}

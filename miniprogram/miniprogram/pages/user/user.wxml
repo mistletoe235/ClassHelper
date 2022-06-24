@@ -1,0 +1,44 @@
+<view class="top_box">
+      <view class="top_1">
+            <view wx:if="{{!userinfo}}" class="top_1_1" bindtap="quit" data-go="/pages/login/login">点击登录</view>
+            <view wx:if="{{userinfo}}" class="top_1_1">
+                  <view>{{userinfo.userInfo.nickName}}</view>
+            </view>
+            <view class="top_1_2" wx:if="{{!userinfo}}">一秒登录，体验所有功能</view>
+            <view class="top_1_2" wx:if="{{userinfo}}" bindtap="quit" data-go="/pages/edit/edit" data-status="1">点击退出登录</view>
+      </view>
+      <view class="top_2">
+            <view class="avator">
+                  <image wx:if="{{userinfo}}" src="{{userinfo.userInfo.avatarUrl}}"></image>
+                  <image wx:if="{{!userinfo}}" src="/images/avator.png"></image>
+            </view>
+      </view>
+</view>
+
+<view class="blank"></view>
+<view class="bottom_box">
+      <view class="bottom_card" bindtap="go" data-go="/pages/userinfo/userinfo" data-status="1">
+            <view class="bottom_1">
+                  <image src="/image/feedback.png"></image>
+                  <view>姓名</view>
+                  <view style="margin-left: 30rpx;">{{userinfo.name}}</view>
+            </view>
+      </view>
+
+      <view class="bottom_card" bindtap="go" data-go="/pages/my_want/my_want">
+            <view class="bottom_1">
+                  <image src="/image/fen.png"></image>
+                  <view>班级</view>
+                  <view style="margin-left: 30rpx;">{{userinfo.classid}}</view>
+            </view>
+      </view>
+
+</view>
+
+<cover-view class="tab-bar">
+      <cover-view class="tab-bar-border"></cover-view>
+      <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+            <cover-image class="cover-image" src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image>
+            <cover-view class="cover-view" style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+      </cover-view>
+</cover-view>

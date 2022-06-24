@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="login-from">
+
+    <!--账号-->
+    <view class="inputView">
+      <label class="loginLab">账号</label>
+      <input class="inputText" value="{{username}}" placeholder="请输入账号" bindinput="usernameInput" />
+    </view>
+    <view class="line"></view>
+
+    <!--密码-->
+    <view class="inputView">
+      <label class="loginLab">密码</label>
+      <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" />
+    </view>
+
+    <!--按钮-->
+    <view class="loginBtnView">
+      <button class="loginBtn" style="background: #ff7847; color: aliceblue;" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}" bindtap="login">{{login_btn}}</button>
+    </view>
+  </view>
+</view>

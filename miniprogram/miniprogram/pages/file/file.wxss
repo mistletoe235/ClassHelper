@@ -1,0 +1,96 @@
+/* pages/file/file.wxss */
+.header {
+    display: flex;
+    box-sizing: border-box;
+    padding: 20rpx 20rpx 0 20rpx;
+    width: 100%;
+    /* height: 100rpx; */
+    /* background-color: white; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    width: 300rpx;
+    height: 50rpx;
+    background-color: rgb(34, 117, 185);
+    border: 1px solid rgb(34, 117, 185);
+    border-radius: 25rpx;
+}
+
+.dropdown .picker {
+    width: 100%;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+    color: white;
+}
+
+.uploadMaterial {
+    position: relative;
+    float: right;
+    width: 300rpx;
+    height: 80rpx;
+    background-color: #23affe;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    color: white;
+    font-weight: 700;
+}
+
+.uploadMaterial::before{
+    position: absolute;
+    text-indent: 0;
+    left: 20rpx;
+    top:-6rpx;
+    content: '+';
+    font-size: 50rpx;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid rgb(192, 190, 190);
+    padding-top: 30rpx;
+    margin-top: 50rpx;
+}
+
+.materialCard{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10rpx;
+    width: 90%;
+    height: 150rpx;
+    background-color: white;
+    border-radius: 10rpx;
+    margin-bottom: 30rpx;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.materialCard .mcInfo .mcName{
+    margin-top: 20rpx;
+    font-size: larger;
+    border-bottom: 1px solid #eee;
+    padding: 0 0 4px;
+}
+
+.materialCard .mcInfo .mcSubject{
+    color: #5f6368;
+    font-size: 12px;
+}
+
+.materialCard .download{
+    position: relative;
+    margin: 0;
+    width: 40rpx;
+    background-color: #23affe;
+}
+.materialCard .download::before{
+    position: absolute;
+    content:'下载';
+    top:50rpx;
+    left: 15rpx;
+}
