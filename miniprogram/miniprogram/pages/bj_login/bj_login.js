@@ -63,11 +63,11 @@ Page({
     var picName=""
     wx.cloud.callContainer({
       "config": {
-        "env": "prod-9ghk716g03af657a"
+        "env": ""//填入环境
       },
       "path": `/get/?username=${that.data.username}&password=${that.data.password}`,
       "header": {
-        "X-WX-SERVICE": "bjyouth"
+        "X-WX-SERVICE": ""//填入名称
       },
       "method": "GET",
       "data": "",

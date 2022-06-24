@@ -117,17 +117,18 @@ Page({
     this.closeNFC();
   },
 
+  //填入mqtt连接信息
   connectMqtt:function(){
     var that=this;
     const options={
       connectTimeout:4000,
-      cliendtId:'wechat',
+      cliendtId:'',
       port:443,
-      username:'f694n6g/user',
-      password:'uZme2dZ4Vb13M2ec'
+      username:'',
+      password:''
     }
 
-    client=mqtt.connect('wxs://f694n6g.mqtt.iot.gz.baidubce.com/mqtt',options),
+    client=mqtt.connect('wxs://',options),//mqtt服务器地址
     client.on('connect',(e)=>{
         console.log('服务器连接成功')
         client.subscribe('aid',{qos:0},
